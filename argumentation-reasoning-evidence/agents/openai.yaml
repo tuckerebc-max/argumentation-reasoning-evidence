@@ -1,0 +1,6 @@
+interface:
+  display_name: "Argumentation, Reasoning, and Evidence"
+  short_description: "Audit claims, warrants, and alternatives"
+  default_prompt: "Use $argumentation-reasoning-evidence to audit this claim, evidence, warrant, strongest alternative, and next decision."
+policy:
+  allow_implicit_invocation: true

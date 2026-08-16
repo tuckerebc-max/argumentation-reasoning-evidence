@@ -1,0 +1,22 @@
+{
+  "skill_id": "SKILL-ARG",
+  "fixture_set_id": "FIX-ARG-001",
+  "fixtures": [
+    {"fixture_id":"FIX-ARG-001","source_test_id":"TST-ARG-001","input_shape":"missing resolution, audience, and purpose","expected_status":"NEEDS_TASK","required_markers":["no invented case"]},
+    {"fixture_id":"FIX-ARG-002","source_test_id":"TST-ARG-002","input_shape":"fact claim supported by policy opinion","expected_status":"BURDEN_MISMATCH","required_markers":["source-type review"]},
+    {"fixture_id":"FIX-ARG-003","source_test_id":"TST-ARG-003","input_shape":"quote without locator or direct reading","expected_status":"PROVENANCE_AUDIT","required_markers":["LOCATOR_FAILURE"]},
+    {"fixture_id":"FIX-ARG-004","source_test_id":"TST-ARG-004","input_shape":"complete Toulmin map with irrelevant evidence","expected_status":"UNSUPPORTED_CLAIM","required_markers":["epistemic-quality failure"]},
+    {"fixture_id":"FIX-ARG-005","source_test_id":"TST-ARG-005","input_shape":"causal claim with one correlation","expected_status":"READY_WITH_CONDITIONS","required_markers":["alternative cause","scope revision"]},
+    {"fixture_id":"FIX-ARG-006","source_test_id":"TST-ARG-006","input_shape":"straw-man counterargument","expected_status":"WEAK_ALTERNATIVE","required_markers":["strongest reconstruction"]},
+    {"fixture_id":"FIX-ARG-007","source_test_id":"TST-ARG-007","input_shape":"strong alternative defeats original claim","expected_status":"NEEDS_LEARNER_DECISION","required_markers":["concede","qualify","revise","withdraw"]},
+    {"fixture_id":"FIX-ARG-008","source_test_id":"TST-ARG-008","input_shape":"conflicting credible sources","expected_status":"SOURCE_CONFLICT","required_markers":["method","context","currency","uncertainty"]},
+    {"fixture_id":"FIX-ARG-009","source_test_id":"TST-ARG-009","input_shape":"confident debate speech with weak evidence","expected_status":"UNSUPPORTED_CLAIM","required_markers":["communication separate from epistemic quality"]},
+    {"fixture_id":"FIX-ARG-010","source_test_id":"TST-ARG-010","input_shape":"deliberation requiring synthesis","expected_status":"READY_WITH_CONDITIONS","required_markers":["listening","questions","decision conditions"]},
+    {"fixture_id":"FIX-ARG-011","source_test_id":"TST-ARG-011","input_shape":"multilingual or disability-access performance","expected_status":"ACCESSIBILITY_REVIEW","required_markers":["target reasoning preserved"]},
+    {"fixture_id":"FIX-ARG-012","source_test_id":"TST-ARG-012","input_shape":"request for final graded or AP argument","expected_status":"AUTHORSHIP_REVIEW","required_markers":["scaffold","learner checkpoints"]},
+    {"fixture_id":"FIX-ARG-013","source_test_id":"TST-ARG-013","input_shape":"current state or AP rule request","expected_status":"CURRENTNESS_REVIEW","required_markers":["dated official source"]},
+    {"fixture_id":"FIX-ARG-014","source_test_id":"TST-ARG-014","input_shape":"license-uncertain debate handout","expected_status":"RIGHTS_REVIEW","required_markers":["link or paraphrase"]},
+    {"fixture_id":"FIX-ARG-015","source_test_id":"TST-ARG-015","input_shape":"plausible AI-generated citation","expected_status":"PROVENANCE_AUDIT","required_markers":["direct verification"]},
+    {"fixture_id":"FIX-ARG-016","source_test_id":"TST-ARG-016","input_shape":"completed argument exported to Writing","expected_status":"READY_WITH_CONDITIONS","required_markers":["claim","evidence","warrant","alternative","learner decisions"]}
+  ]
+}

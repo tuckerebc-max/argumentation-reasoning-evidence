@@ -1,0 +1,26 @@
+{
+  "catalog_id": "CATALOG-SKILL-ARG-001",
+  "schema_version": "0.1",
+  "as_of": "2026-08-15",
+  "source_snapshot": "2026-08-09",
+  "release_status": "finalized_private_draft",
+  "repository_visibility": "private",
+  "source_root_alias": "ANRI-TEXTBOOK-BUILD-2026-08-08",
+  "skills": [
+    {
+      "skill_id": "SKILL-ARG",
+      "package_name": "argumentation-reasoning-evidence",
+      "label": "Argumentation, Reasoning, and Evidence",
+      "package_version": "0.1.0",
+      "status": "finalized_private_draft",
+      "allow_implicit_invocation": true,
+      "competency_id": "COMP-ARG-REASONING",
+      "canonical_source_ids": ["SPEC-ARG-001", "ANRI-DOM-ARG-001", "ARCH-ARG-001", "CORP-ARG-001"],
+      "evaluator_id": "EVAL-ARG-001",
+      "source_paths": ["02_Domain_Prompts/argumentation/argumentation-prompt.md", "03_Corpora/argumentation/corpus-crosswalk.md", "04_Technical_Specifications/argumentation/competency-design-specification.md", "04_Technical_Specifications/argumentation/technical-specification.md", "05_Textbook_Architectures/argumentation/textbook-architecture.md"],
+      "validation_test_ids": ["TST-ARG-001", "TST-ARG-002", "TST-ARG-003", "TST-ARG-004", "TST-ARG-005", "TST-ARG-006", "TST-ARG-007", "TST-ARG-008", "TST-ARG-009", "TST-ARG-010", "TST-ARG-011", "TST-ARG-012", "TST-ARG-013", "TST-ARG-014", "TST-ARG-015", "TST-ARG-016", "TST-INT-006", "TST-INT-007"],
+      "handoff_ids": ["HOF-CR-ARG-001", "HOF-QST-ARG-001", "HOF-WR-ARG-001", "HOF-ARG-WR-001", "HOF-ARG-QST-001", "HOF-ARG-PAR-001"],
+      "paths": {"skill": "SKILL.md", "ui_metadata": "agents/openai.yaml", "evaluator": "references/evaluator-spec.json", "codification": "references/competency-codification.md", "representative_record": "tests/fixtures/representative-record.json"}
+    }
+  ]
+}

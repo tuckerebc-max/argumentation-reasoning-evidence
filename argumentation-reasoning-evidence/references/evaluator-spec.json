@@ -1,0 +1,21 @@
+{
+  "evaluator_id": "EVAL-ARG-001",
+  "skill_id": "SKILL-ARG",
+  "competency_id": "COMP-ARG-REASONING",
+  "version": "0.1.0",
+  "canonical_sources": ["SPEC-ARG-001", "ANRI-DOM-ARG-001", "ARCH-ARG-001", "CORP-ARG-001"],
+  "functional_requirement_ids": ["FR-ARG-01", "FR-ARG-02", "FR-ARG-03", "FR-ARG-04", "FR-ARG-05", "FR-ARG-06", "FR-ARG-07", "FR-ARG-08", "FR-ARG-09", "FR-ARG-10", "FR-ARG-11", "FR-ARG-12", "FR-ARG-13", "FR-ARG-14", "FR-ARG-15", "FR-ARG-16", "FR-ARG-17"],
+  "observable_performance_ids": ["OP-ARG-01", "OP-ARG-02", "OP-ARG-03", "OP-ARG-04", "OP-ARG-05", "OP-ARG-06", "OP-ARG-07", "OP-ARG-08"],
+  "diagnostic_dimensions": ["issue_fit", "claim_scope", "reason_evidence_quality", "warrant_adequacy", "source_provenance_integrity", "alternative_representation", "objection_response", "burden_mode_fit", "delivery_participation", "revision", "authorship_transparency"],
+  "required_test_ids": ["TST-ARG-001", "TST-ARG-002", "TST-ARG-003", "TST-ARG-004", "TST-ARG-005", "TST-ARG-006", "TST-ARG-007", "TST-ARG-008", "TST-ARG-009", "TST-ARG-010", "TST-ARG-011", "TST-ARG-012", "TST-ARG-013", "TST-ARG-014", "TST-ARG-015", "TST-ARG-016", "TST-INT-006", "TST-INT-007"],
+  "checks": [
+    {"check_id":"ARG-CHECK-001","type":"required_paths","paths":["skill_id","skill_version","task_contract","payload.task_contract","payload.stasis_map","payload.argument_map","payload.evidence_ledger","payload.inference_test","payload.quality_profile","payload.strongest_alternative","payload.response_plan","payload.uncertainty","payload.learner_decisions","payload.transfer_routes","source_ids","evidence_ids","claim_ids","next_action"],"failure_status":"NEEDS_TASK","message":"Issue, burden, argument map, evidence, alternative, response, uncertainty, and transfer records are required."},
+    {"check_id":"ARG-CHECK-002","type":"all_items_have","path":"payload.argument_map","fields":["claim_id","reason_ids","evidence_ids","warrant_status"],"failure_status":"MISSING_WARRANT","message":"Every argument node must expose reasons, evidence, and warrant status."},
+    {"check_id":"ARG-CHECK-003","type":"all_items_have","path":"payload.evidence_ledger","fields":["evidence_id","source_id","locator","status"],"failure_status":"PROVENANCE_AUDIT","message":"Every argument evidence entry needs direct source linkage and locator."},
+    {"check_id":"ARG-CHECK-004","type":"all_items_have","path":"payload.strongest_alternative","fields":["claim","evidence_ids","status"],"failure_status":"WEAK_ALTERNATIVE","message":"The strongest alternative must be reconstructed with evidence and status."},
+    {"check_id":"ARG-CHECK-005","type":"unique_values","path":"claim_ids","failure_status":"PROVENANCE_AUDIT","message":"Claim IDs must be unique across argument revisions and handoffs."},
+    {"check_id":"ARG-CHECK-006","type":"present_paths","paths":["uncertainty_ids","provenance_ids","learner_decisions","accessibility_notes","rights_and_permissions","ai_use_log"],"failure_status":"NEEDS_REVIEW","message":"Uncertainty, provenance, learner, access, rights, and AI-use fields must remain visible."},
+    {"check_id":"ARG-CHECK-007","type":"manual_review","topic":"mode, currentness, rights, and public transfer","condition":"Human review is required for current rules, license-uncertain materials, high-consequence claims, assessed arguments, and ARG-to-PAR transfer."}
+  ],
+  "release_conditions": ["Toulmin and other schemes remain diagnostics, not a universal scoring theory.", "No invented source, quote, current rule, legal conclusion, stakeholder view, or evidence.", "Written, debate, deliberative, and multimodal fixtures receive mode-specific review."]
+}

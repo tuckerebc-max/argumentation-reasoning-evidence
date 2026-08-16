@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://anri.local/schemas/argumentation-reasoning-evidence-payload.schema.json",
+  "title": "Argumentation payload",
+  "type": "object",
+  "required": ["task_contract", "stasis_map", "argument_map", "evidence_ledger", "inference_test", "quality_profile", "strongest_alternative", "response_plan", "uncertainty", "learner_decisions", "transfer_routes"],
+  "properties": {
+    "task_contract": {"type": "object"},
+    "stasis_map": {"type": "array", "items": {"type": "object"}},
+    "argument_map": {"type": "array", "items": {"type": "object"}},
+    "evidence_ledger": {"type": "array", "items": {"type": "object"}},
+    "inference_test": {"type": "object"},
+    "quality_profile": {"type": "object"},
+    "strongest_alternative": {"type": "object"},
+    "response_plan": {"type": "object"},
+    "uncertainty": {"type": "array", "items": {"type": "object"}},
+    "learner_decisions": {"type": "array", "items": {"type": "object"}},
+    "transfer_routes": {"type": "array", "items": {"type": "object"}}
+  }
+}
